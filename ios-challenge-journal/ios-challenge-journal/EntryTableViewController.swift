@@ -19,31 +19,38 @@ class EntryTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return EntryController.sharedInstance.entries.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("entryCell", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        let entry = EntryController.sharedInstance.entries[indexPath.row]
+        cell.textLabel?.text = entry.title
+        
         return cell
     }
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+
+            let entry = EntryController.sharedInstance.entries[indexPath.row]
+            EntryController.sharedInstance.removeEntry(entry)
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
  
 
