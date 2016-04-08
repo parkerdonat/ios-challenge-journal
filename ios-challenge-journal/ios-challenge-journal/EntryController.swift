@@ -33,12 +33,23 @@ class EntryController {
     }
     
     func saveToPersistantStorage() {
-        
+        var entryDictionaryArray: [[String: AnyObject]] = []
+        for entry in entries {
+            let entryDictionary = entry.dictionaryCopy
+            entryDictionaryArray.append(entryDictionary)
+        }
+        NSUserDefaults.standardUserDefaults().setObject(entryDictionaryArray, forKey: kEntries)
     }
     
     func loadFromPersistentStorage() {
-        
+        if let entryDictionaryArray = NSUserDefaults.standardUserDefaults().objectForKey(kEntries) as? [[String: AnyObject]] {
+            var entriesArray: [Entry] = []
+            for entryDictionary in entryDictionaryArray {
+                if let entry = Entry(dictionary: entryDictionary) {
+                    entriesArray.append(entry)
+                }
+            }
+            self.entries = entriesArray
+        }
     }
-    
-    
 }
