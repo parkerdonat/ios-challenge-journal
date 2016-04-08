@@ -8,12 +8,20 @@
 
 import UIKit
 
-class EntryDetailViewController: UIViewController {
+class EntryDetailViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var bodyTextView: UITextView!
+    
+    var entry: Entry?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let entry = self.entry {
+            updateWithEntry(entry)
+        }
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +30,34 @@ class EntryDetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(sender: AnyObject) {
+        if let entry = self.entry {
+            entry.title = self.titleTextField.text!
+            entry.body = self.bodyTextView.text
+            entry.timeStamp = NSDate()
+        } else {
+            let newEntry = Entry(title: self.titleTextField.text!, body: self.bodyTextView.text)
+            EntryController.sharedInstance.addEntry(newEntry)
+            self.entry = newEntry
+        }
     }
-    */
-
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    
+    @IBAction func clearButtonPressed(sender: AnyObject) {
+        self.titleTextField.text = ""
+        self.bodyTextView.text = ""
+    }
+    
+    func updateWithEntry(entry: Entry) {
+        self.entry = entry
+        self.titleTextField.text = entry.title
+        self.bodyTextView.text = entry.body
+    }
 }
