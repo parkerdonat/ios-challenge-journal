@@ -14,6 +14,7 @@
 		DDF7C4181CB83F54001A0ECD /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C4171CB83F54001A0ECD /* EntryDetailViewController.swift */; };
 		DDF7C41A1CB83F68001A0ECD /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C4191CB83F68001A0ECD /* EntryTableViewController.swift */; };
 		DDF7C41C1CB83F74001A0ECD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C41B1CB83F74001A0ECD /* Entry.swift */; };
+		DDF7C41E1CB8420A001A0ECD /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C41D1CB8420A001A0ECD /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DDF7C4171CB83F54001A0ECD /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		DDF7C4191CB83F68001A0ECD /* EntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
 		DDF7C41B1CB83F74001A0ECD /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		DDF7C41D1CB8420A001A0ECD /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				DDF7C4051CB83DC5001A0ECD /* AppDelegate.swift */,
 				DDF7C41B1CB83F74001A0ECD /* Entry.swift */,
+				DDF7C41D1CB8420A001A0ECD /* EntryController.swift */,
 				DDF7C4091CB83DC5001A0ECD /* Main.storyboard */,
 				DDF7C4191CB83F68001A0ECD /* EntryTableViewController.swift */,
 				DDF7C4171CB83F54001A0ECD /* EntryDetailViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				DDF7C41C1CB83F74001A0ECD /* Entry.swift in Sources */,
 				DDF7C4181CB83F54001A0ECD /* EntryDetailViewController.swift in Sources */,
+				DDF7C41E1CB8420A001A0ECD /* EntryController.swift in Sources */,
 				DDF7C41A1CB83F68001A0ECD /* EntryTableViewController.swift in Sources */,
 				DDF7C4061CB83DC5001A0ECD /* AppDelegate.swift in Sources */,
 			);
@@ -294,6 +298,7 @@
 				DDF7C4161CB83DC5001A0ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
