@@ -21,7 +21,6 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
         if let entry = self.entry {
             updateWithEntry(entry)
         }
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,10 +39,10 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
             EntryController.sharedInstance.addEntry(newEntry)
             self.entry = newEntry
         }
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         
         return true
