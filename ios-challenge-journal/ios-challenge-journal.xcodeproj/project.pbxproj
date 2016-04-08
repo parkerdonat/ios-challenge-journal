@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		DDF7C4061CB83DC5001A0ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C4051CB83DC5001A0ECD /* AppDelegate.swift */; };
-		DDF7C4081CB83DC5001A0ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C4071CB83DC5001A0ECD /* ViewController.swift */; };
 		DDF7C40B1CB83DC5001A0ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF7C4091CB83DC5001A0ECD /* Main.storyboard */; };
 		DDF7C40D1CB83DC5001A0ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF7C40C1CB83DC5001A0ECD /* Assets.xcassets */; };
 		DDF7C4101CB83DC5001A0ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF7C40E1CB83DC5001A0ECD /* LaunchScreen.storyboard */; };
+		DDF7C4181CB83F54001A0ECD /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C4171CB83F54001A0ECD /* EntryDetailViewController.swift */; };
+		DDF7C41A1CB83F68001A0ECD /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C4191CB83F68001A0ECD /* EntryTableViewController.swift */; };
+		DDF7C41C1CB83F74001A0ECD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C41B1CB83F74001A0ECD /* Entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDF7C4021CB83DC5001A0ECD /* ios-challenge-journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-challenge-journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF7C4051CB83DC5001A0ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDF7C4071CB83DC5001A0ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDF7C40A1CB83DC5001A0ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDF7C40C1CB83DC5001A0ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF7C40F1CB83DC5001A0ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF7C4111CB83DC5001A0ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDF7C4171CB83F54001A0ECD /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		DDF7C4191CB83F68001A0ECD /* EntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		DDF7C41B1CB83F74001A0ECD /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				DDF7C4051CB83DC5001A0ECD /* AppDelegate.swift */,
-				DDF7C4071CB83DC5001A0ECD /* ViewController.swift */,
+				DDF7C41B1CB83F74001A0ECD /* Entry.swift */,
 				DDF7C4091CB83DC5001A0ECD /* Main.storyboard */,
+				DDF7C4191CB83F68001A0ECD /* EntryTableViewController.swift */,
+				DDF7C4171CB83F54001A0ECD /* EntryDetailViewController.swift */,
 				DDF7C40C1CB83DC5001A0ECD /* Assets.xcassets */,
 				DDF7C40E1CB83DC5001A0ECD /* LaunchScreen.storyboard */,
 				DDF7C4111CB83DC5001A0ECD /* Info.plist */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF7C4081CB83DC5001A0ECD /* ViewController.swift in Sources */,
+				DDF7C41C1CB83F74001A0ECD /* Entry.swift in Sources */,
+				DDF7C4181CB83F54001A0ECD /* EntryDetailViewController.swift in Sources */,
+				DDF7C41A1CB83F68001A0ECD /* EntryTableViewController.swift in Sources */,
 				DDF7C4061CB83DC5001A0ECD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
